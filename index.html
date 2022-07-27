@@ -11,6 +11,13 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -22,14 +29,159 @@
         <div class="main">
           <div class="add-number">
             <input
+              id="txtNumber"
               class="input rounded-pill border-0"
               type="number"
               placeholder="Nhập số"
             />
-            <button class="btn btn-primary rounded-pill">Thêm Số</button>
+            <button class="btn btn-primary rounded-pill" onclick="addNumber()">
+              Thêm Số
+            </button>
+            <div id="result" class="mt-4 alert alert-danger"></div>
           </div>
+          <div class="calc">
+            <div class="row">
+              <div class="col">
+                <div class="item">
+                  <i class="fa-solid fa-1 me-1"></i>
+                  <span>Tổng Số Dương</span>
+                  <div>
+                    <button
+                      class="btn btn-primary rounded-pill mb-3 mt-3"
+                      onclick="calc1()"
+                    >
+                      Tính
+                    </button>
+                  </div>
 
-          <div class="alert alert-danger"></div>
+                  <div id="rs1" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-2 me-1"></i>
+                  <span>Đếm Số Dương</span>
+                  <div>
+                    <button
+                      class="btn btn-primary rounded-pill mb-3 mt-3"
+                      onclick="calc2()"
+                    >
+                      Đếm
+                    </button>
+                  </div>
+
+                  <div id="rs2" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-3 me-1"></i>
+                  <span>Tìm số nhỏ nhất</span>
+                  <div>
+                    <button
+                      class="btn btn-primary rounded-pill mb-3 mt-3"
+                      onclick="calc3()"
+                    >
+                      Tính
+                    </button>
+                  </div>
+
+                  <div id="rs3" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-4 me-1"></i>
+                  <span>Tìm số dương nhỏ nhất</span>
+                  <div>
+                    <button
+                      class="btn btn-primary rounded-pill mb-3 mt-3"
+                      onclick="calc4()"
+                    >
+                      Tính
+                    </button>
+                  </div>
+
+                  <div id="rs4" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-5 me-1"></i>
+                  <span>Tìm số chẵn cuối cùng</span>
+                  <div>
+                    <button
+                      class="btn btn-primary rounded-pill mb-3 mt-3"
+                      onclick="calc5()"
+                    >
+                      Tính
+                    </button>
+                  </div>
+
+                  <div id="rs5" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-6 me-1"></i>
+                  <span>Đổi chỗ</span>
+                  <div>
+                    <input id="txtIndex1"
+                      class="input rounded-pill border-0"
+                      type="number"
+                      placeholder="Nhập vị trí"
+                    />
+                    <input id="txtIndex2"
+                      class="input rounded-pill border-0"
+                      type="number"
+                      placeholder="Nhập vị trí"
+                    />
+
+                    <button class="btn btn-primary rounded-pill mb-3 mt-3" onclick="calc6()">
+                      Hoán đổi
+                    </button>
+                  </div>
+
+                  <div id="rs6" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-7 me-1"></i>
+                  <span>Sắp xếp tăng dần</span>
+                  <div>
+                    <button class="btn btn-primary rounded-pill mb-3 mt-3" onclick="calc7()">
+                      Tính
+                    </button>
+                  </div>
+
+                  <div id="rs7" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-8 me-1"></i>
+                  <span>Tìm số nguyên tố đầu tiên</span>
+                  <div>
+                    <button class="btn btn-primary rounded-pill mb-3 mt-3"onclick="calc8()">
+                      Tính
+                    </button>
+                  </div>
+
+                  <div id="rs8" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-9 me-1"></i>
+                  <span>Đếm số nguyên</span>
+                  <div>
+                    <button class="btn btn-primary rounded-pill mb-3 mt-3" onclick="calc9()">
+                      Tính
+                    </button>
+                  </div>
+
+                  <div id="rs9" class="alert alert-danger"></div>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-1"></i>
+                  <i class="fa-solid fa-0 me-1"></i>
+                  <span>So sánh số lượng số âm và số dương</span>
+                  <div>
+                    <button class="btn btn-primary rounded-pill mb-3 mt-3"onclick="calc10()">
+                      So Sánh
+                    </button>
+                  </div>
+
+                  <div id="rs10" class="alert alert-danger"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

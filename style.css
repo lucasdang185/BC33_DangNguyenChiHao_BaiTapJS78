@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(./img/34e98be3df368d7921b2ac0f17079696.jpg);
+    background-image: url(./img/1d4b36ed161c892f7556dd8bc8424231.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -20,4 +20,15 @@ body{
 .ex78 .main .input{
     padding: 0 20px;
     line-height: 40px;
+}
+.ex78 .calc .item{
+    padding: 40px;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.ex78 .calc .item span{
+    font-weight: 500;
+    color: rgb(55, 131, 218);
+    font-size: 20px;
 }
